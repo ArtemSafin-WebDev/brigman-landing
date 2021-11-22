@@ -21,6 +21,7 @@ import whyBrigman from './whyBrigman';
 import menu from './menu';
 import scheme from './scheme';
 import faq from './faq';
+import reviews from './reviews';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     scheme();
     faq();
+    reviews();
 });
 
 window.addEventListener('load', function() {

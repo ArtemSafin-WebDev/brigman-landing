@@ -9,6 +9,8 @@ export default function ticker() {
         const items = Array.from(innerTrack.children);
         const REPEAT_COUNT = 4;
 
+        
+
         for (let i = 0; i < REPEAT_COUNT; i++) {
             items.forEach(item => {
                 innerTrack.appendChild(item.cloneNode(true));
