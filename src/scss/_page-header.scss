@@ -4,6 +4,14 @@
     top: 0;
     width: 100%;
     z-index: 80;
+
+    .mobile-menu-open & {
+        padding-right: var(--sb-width, 0);
+    }
+
+    .modal-open & {
+        padding-right: var(--sb-width, 0);
+    }
 }
 
 .page-header__row {
@@ -31,6 +39,8 @@
 
 .page-header__logo {
     flex-shrink: 0;
+    position: relative;
+    z-index: 150;
 }
 
 .page-header__logo-image {
@@ -70,6 +80,8 @@
     align-items: center;
     gap: 1.5rem;
     flex-shrink: 0;
+    position: relative;
+    z-index: 150;
 }
 
 .page-header__button {
@@ -116,12 +128,173 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    position: relative;
+    z-index: 150;
 
     & > span {
         width: 4rem;
         height: 0.2rem;
         background-color: #fff;
         flex-shrink: 0;
-        transition: opacity 0.2s, transform 0.2s;
+        transition: opacity 0.2s, transform 0.2s, transform .2s;
     }
+
+    .mobile-menu-open & {
+        & > span {
+            &:nth-child(1) {
+                transform: translateY(.7rem) rotate(30deg);
+                
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: translateY(-.7rem) rotate(-30deg);
+            }
+        }
+    }
+
+    
+}
+
+.page-header__menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: #100916;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s, visibility 0s linear .4s;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .mobile-menu-open & {
+        right: var(--sb-width, 0);
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .4s, visibility .4s;
+    }
+}
+
+.page-header__menu-inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 17rem;
+    position: relative;
+    z-index: 1;
+    padding-top: 19rem;
+    padding-bottom: 6rem;
+}
+
+.page-header__menu-nav {
+    margin-bottom: 3rem;
+
+    & > ul {
+        display: flex;
+        flex-direction: column;
+
+        & > li {
+            margin-bottom: 2.5rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            & > a {
+                font-weight: normal;
+                font-size: 3rem;
+                line-height: 1.2;
+                text-transform: uppercase;
+                font-family: var(--helios);
+
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+}
+
+.page-header__menu-social-list {
+    display: flex;
+    align-items: center;
+    gap: 6.4rem;
+    margin-top: auto;
+}
+
+.page-header__menu-social-list-item {
+}
+
+.page-header__menu-social-link {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--primary-color);
+    font-family: var(--helios);
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+    svg {
+        width: 3.2rem;
+        height: 3.2rem;
+        flex-shrink: 0;
+        margin-right: 1rem;
+        fill: white;
+    }
+}
+
+.page-header__menu-mops {
+    position: absolute;
+    right: 0rem;
+    bottom: 0;
+    width: 70rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../img/mops-quote-bar.svg');
+        width: 4rem;
+        height: 7.2rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        bottom: 24rem;
+        left: 50%;
+        margin-left: -10rem;
+        transform: translateX(-50%);
+    }
+}
+
+.page-header__menu-mops-image {
+    display: block;
+    height: auto;
+}
+
+.page-header__menu-mops-text {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56rem;
+    height: auto;
+    padding: 5rem;
+    border: 1px solid #2e2239;
+    border-radius: 2rem;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 2.4rem;
 }
