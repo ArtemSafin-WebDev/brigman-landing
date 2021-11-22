@@ -1,5 +1,9 @@
 .contact-us {
     margin-bottom: 23rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .contact-us__form {
@@ -10,6 +14,14 @@
     z-index: 1;
     padding: 7.5rem 8rem;
     padding-right: 28.5rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        max-width: none;
+        padding: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 16rem;
+    }
 
     .parsley-errors-list.filled {
         margin-top: 0.6rem;
@@ -76,6 +88,12 @@
     text-transform: uppercase;
     font-family: var(--helios);
     margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        margin-bottom: 3rem;
+    }
 }
 
 .contact-us__form-fields {
@@ -84,6 +102,12 @@
     grid-gap: 2rem;
     grid-row-gap: 2.6rem;
     margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
 }
 
 .contact-us__form-field--wide {
@@ -109,6 +133,11 @@
     user-select: none;
 
     color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
 }
 
 .contact-us__form-input {
@@ -122,7 +151,12 @@
     font: inherit;
     color: white;
 
-   
+    @include breakpoint(mobile) {
+        height: 5.6rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+
     &:not(:focus):not(.parsley-error):placeholder-shown {
         border-color: white;
     }
@@ -130,7 +164,6 @@
         opacity: 0;
     }
 }
-
 
 .contact-us__form-input:placeholder-shown ~ .contact-us__form-label-text {
     color: white;
@@ -149,11 +182,20 @@ textarea.contact-us__form-input {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     display: block;
+
+    @include breakpoint(mobile) {
+        height: 10rem;
+    }
 }
 
 .contact-us__form-controls {
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
     .parsley-errors-list {
         display: none;
@@ -172,12 +214,27 @@ textarea.contact-us__form-input {
     flex-shrink: 0;
     white-space: nowrap;
     margin-right: 4.4rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0.8rem 1.6rem;
+    }
 }
 
 .contact-us__form-checkbox {
     display: flex;
     align-items: center;
     cursor: pointer;
+
+    @include breakpoint(mobile) {
+        align-items: flex-start;
+    }
 }
 
 .contact-us__form-checkbox-input {
@@ -196,7 +253,10 @@ textarea.contact-us__form-input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: border-color .2s;
+    transition: border-color 0.2s;
+
+    @include breakpoint(mobile) {
+    }
 
     .parsley-error & {
         border-color: var(--primary-color);
@@ -223,6 +283,11 @@ textarea.contact-us__form-input {
     line-height: 1.6rem;
     font-family: var(--helios);
 
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
     a {
         text-decoration: underline;
 
@@ -238,9 +303,23 @@ textarea.contact-us__form-input {
     height: auto;
     right: -15rem;
     bottom: -7rem;
-}
 
+    @include breakpoint(mobile) {
+        width: 15rem;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        right: auto;
+        bottom: auto;
+        margin-top: -4rem;
+    }
+}
 
 .contact-us__ticker {
     margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding: 0 var(--content-padding);
+        margin-bottom: 3rem;
+    }
 }

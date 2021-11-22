@@ -1,26 +1,58 @@
 .page-footer {
     padding-bottom: 4rem;
     position: relative;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 18rem;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
 }
 
 .page-footer__top-row {
     display: flex;
     align-items: center;
     margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+}
+
+.page-footer__bottom-row {
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 .page-footer__logo {
     flex-shrink: 0;
     margin-right: 7.4rem;
+
+    @include breakpoint(mobile) {
+        flex-shrink: 0;
+        margin: 0;
+    }
 }
 
 .page-footer__logo-image {
     display: block;
     width: 17rem;
     height: auto;
+
+    @include breakpoint(mobile) {
+        width: 10rem;
+    }
 }
 
 .page-footer__nav {
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
     & > ul {
         display: flex;
         align-items: center;
@@ -45,7 +77,11 @@
 .page-footer__social-list {
     display: flex;
     align-items: center;
-    gap: 6.4rem;
+    gap: 6.4rem;    
+    flex-wrap: wrap;
+    @include breakpoint(mobile) {
+        gap: 1rem;
+    }
 }
 
 .page-footer__social-link {
@@ -66,6 +102,16 @@
         flex-shrink: 0;
         margin-right: 1rem;
         fill: white;
+
+        @include breakpoint(mobile) {
+            margin: 0;
+        }
+    }
+}
+
+.page-footer__social-link-text {
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
 
@@ -76,4 +122,10 @@
     height: auto;
     right: 7rem;
     bottom: 0;
+
+    @include breakpoint(mobile) {
+        left: 0;
+        width: 50rem;
+        right: auto;
+    }
 }

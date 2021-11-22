@@ -1,5 +1,8 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Swiper, EffectFade } from 'swiper';
+
+Swiper.use([EffectFade]);
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,6 +30,13 @@ export default function reviews() {
                 duration: 0.4
             });
         } else {
+            const container = element.querySelector('.swiper-container');
+
+            new Swiper(container, {
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+                watchOverflow: true
+            });
         }
     });
 }

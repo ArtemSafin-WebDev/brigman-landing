@@ -17,7 +17,7 @@ export default function scheme() {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     start: 'bottom bottom',
-                    end: `+=${layers.length * 200}%`,
+                    end: `+=${layers.length * 100}%`,
                     trigger: element,
                     anticipatePin: 1,
                     pin: true,

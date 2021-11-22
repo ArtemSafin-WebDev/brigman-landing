@@ -42,11 +42,7 @@
                     </div>
                 </div>
                 <div class="intro__pc-block">
-                    {{!-- <img src="img/pc-resized/1.png" alt="" class="intro__pc-block-image ">
-                    <picture>
-                        <source srcset="img/mobile-pc.png" media="(max-width: 640px)">
-                        <img src="img/pc-resized/1.png" alt="" class="intro__pc-block-image">
-                    </picture> --}}
+                    <img data-src="img/mobile-pc.png" alt="" class="intro__pc-block-mobile-photo lazyload">
 
                 </div>
             </div>
@@ -93,7 +89,7 @@
                                 </h4>
                                 <div class="purpose__card-image-container">
                                     <img src="img/rainbow-blurred-circle.svg" alt="" class="purpose__card-blur">
-                                    <img src="img/pc-1.png" alt="" class="purpose__card-image">
+                                    <img data-src="img/pc-1.png" alt="" class="purpose__card-image lazyload">
                                 </div>
                                 <div class="purpose__card-text">
                                     <p>
@@ -112,7 +108,7 @@
                                 </h4>
                                 <div class="purpose__card-image-container">
                                     <img src="img/blue-blurred-circle.svg" alt="" class="purpose__card-blur">
-                                    <img src="img/pc-2.png" alt="" class="purpose__card-image">
+                                    <img data-src="img/pc-2.png" alt="" class="purpose__card-image lazyload">
                                 </div>
                                 <div class="purpose__card-text">
                                     <p>
@@ -250,7 +246,7 @@
         <div class="container">
             <div class="video__card">
                 <div class="video__card-media">
-                    <img src="img/video-preview.jpg" alt="">
+                    <img data-src="img/video-preview.jpg" alt="" class="lazyload">
                     <div class="video__card-media-plyr-wrapper">
 
 
@@ -285,7 +281,7 @@
 
     <section class="why-brigman js-why-brigman">
         <div class="why-brigman__bg">
-            <img src="img/why-brigman-bg.png" alt="" class="why-brigman__bg-image">
+            <img data-src="img/why-brigman-bg.png" alt="" class="why-brigman__bg-image lazyload">
         </div>
         <div class="container">
             <div class="why-brigman__row">
@@ -460,7 +456,7 @@
                 <div class="swiper-wrapper scheme__stages-layers">
                     <div class="swiper-slide scheme__stages-layer">
                         <div class="scheme__stages-layer-bg">
-                            <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
+                            <img data-src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image lazyload">
                         </div>
                         <div class="scheme__stages-layer-content">
                             <h3 class="scheme__stages-layer-title">
@@ -477,7 +473,7 @@
                     </div>
                     <div class="swiper-slide scheme__stages-layer">
                         <div class="scheme__stages-layer-bg">
-                            <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
+                            <img data-src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image lazyload">
                         </div>
                         <div class="scheme__stages-layer-content">
                             <h3 class="scheme__stages-layer-title">
@@ -494,7 +490,7 @@
                     </div>
                     <div class="swiper-slide scheme__stages-layer">
                         <div class="scheme__stages-layer-bg">
-                            <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
+                            <img data-src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image lazyload">
                         </div>
                         <div class="scheme__stages-layer-content">
                             <h3 class="scheme__stages-layer-title">
@@ -517,7 +513,7 @@
                     </div>
                     <div class="swiper-slide scheme__stages-layer">
                         <div class="scheme__stages-layer-bg">
-                            <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
+                            <img data-src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image lazyload">
                         </div>
                         <div class="scheme__stages-layer-content">
                             <h3 class="scheme__stages-layer-title">
@@ -534,7 +530,7 @@
                     </div>
                     <div class="swiper-slide scheme__stages-layer">
                         <div class="scheme__stages-layer-bg">
-                            <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
+                            <img data-src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image lazyload">
                         </div>
                         <div class="scheme__stages-layer-content">
                             <h3 class="scheme__stages-layer-title">
@@ -1082,9 +1078,14 @@
 
     <section class="reviews js-reviews">
         <div class="reviews__bg">
-            <img src="img/reviews-bg.png" alt="" class="reviews__bg-image">
+            <img data-src="img/reviews-bg.png" alt="" class="reviews__bg-image lazyload">
         </div>
-        <img src="img/reviews-bg-blur.svg" alt="" class="reviews__bg-blur">
+
+
+        <picture>
+            <source srcset="img/reviews-mobile-blur.svg" media="(max-width: 640px)">
+            <img src="img/reviews-bg-blur.svg" alt="" class="reviews__bg-blur">
+        </picture>
         <div class="container">
             <h2 class="section-heading reviews__heading">
                 Отзывы
@@ -1099,13 +1100,14 @@
                         Все отзывы
                     </a>
                 </div>
-                <div class="reviews__slider">
+                <div class="reviews__slider js-reviews-slider">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="#" class="reviews__slider-card">
                                     <div class="reviews__slider-card-image-container">
-                                        <img src="img/reviews/1.jpg" alt="" class="reviews__slider-card-image">
+                                        <img data-src="img/reviews/1.jpg" alt=""
+                                            class="reviews__slider-card-image lazyload">
                                     </div>
                                     <div class="reviews__slider-card-content">
 
@@ -1130,7 +1132,8 @@
                             <div class="swiper-slide">
                                 <a href="#" class="reviews__slider-card">
                                     <div class="reviews__slider-card-image-container">
-                                        <img src="img/reviews/2.jpg" alt="" class="reviews__slider-card-image">
+                                        <img data-src="img/reviews/2.jpg" alt=""
+                                            class="reviews__slider-card-image lazyload">
                                     </div>
                                     <div class="reviews__slider-card-content">
 
@@ -1157,7 +1160,8 @@
                             <div class="swiper-slide">
                                 <a href="#" class="reviews__slider-card">
                                     <div class="reviews__slider-card-image-container">
-                                        <img src="img/reviews/3.jpg" alt="" class="reviews__slider-card-image">
+                                        <img data-src="img/reviews/3.jpg" alt=""
+                                            class="reviews__slider-card-image lazyload">
                                     </div>
                                     <div class="reviews__slider-card-content">
 
@@ -1184,7 +1188,8 @@
                             <div class="swiper-slide">
                                 <a href="#" class="reviews__slider-card">
                                     <div class="reviews__slider-card-image-container">
-                                        <img src="img/reviews/4.jpg" alt="" class="reviews__slider-card-image">
+                                        <img data-src="img/reviews/4.jpg" alt=""
+                                            class="reviews__slider-card-image lazyload">
                                     </div>
                                     <div class="reviews__slider-card-content">
 
@@ -1211,7 +1216,8 @@
                             <div class="swiper-slide">
                                 <a href="#" class="reviews__slider-card">
                                     <div class="reviews__slider-card-image-container">
-                                        <img src="img/reviews/1.jpg" alt="" class="reviews__slider-card-image">
+                                        <img data-src="img/reviews/1.jpg" alt=""
+                                            class="reviews__slider-card-image lazyload">
                                     </div>
                                     <div class="reviews__slider-card-content">
 
@@ -1236,7 +1242,8 @@
                             <div class="swiper-slide">
                                 <a href="#" class="reviews__slider-card">
                                     <div class="reviews__slider-card-image-container">
-                                        <img src="img/reviews/2.jpg" alt="" class="reviews__slider-card-image">
+                                        <img data-src="img/reviews/2.jpg" alt=""
+                                            class="reviews__slider-card-image lazyload">
                                     </div>
                                     <div class="reviews__slider-card-content">
 
@@ -1273,7 +1280,7 @@
         <div class="ticker__track">
             <div class="ticker__inner-track">
                 <div class="ticker__item">
-                    Напишите нам&nbsp;—&nbsp;
+                    Напишите нам<span>&nbsp;—&nbsp;</span>
                 </div>
             </div>
 
@@ -1284,7 +1291,7 @@
         <form action="/" method="POST" class="contact-us__form" data-need-validation="">
             <div class="contact-us__form-bg">
                 <div class="contact-us__form-bg-image-wrapper">
-                    <img src="img/contact-us-bg.png" alt="" class="contact-us__form-bg-image">
+                    <img data-src="img/contact-us-bg.png" alt="" class="contact-us__form-bg-image lazyload">
                 </div>
             </div>
             <h2 class="contact-us__form-heading">
@@ -1346,7 +1353,9 @@
                     </span>
                 </label>
             </div>
-            <img src="img/contact-pc.png" alt="" class="contact-us__form-pc">
+            <img data-src="img/contact-pc.png" alt="" class="contact-us__form-pc lazyload">
+
+           
         </form>
     </div>
 </section>

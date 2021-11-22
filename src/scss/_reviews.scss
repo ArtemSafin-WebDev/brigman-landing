@@ -43,8 +43,8 @@
     z-index: 1;
 
     @include breakpoint(mobile) {
-        width: 100rem;
-        height: 100rem;
+        width: 160rem;
+        height: 160rem;
     }
 }
 
