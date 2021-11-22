@@ -1,5 +1,4 @@
 import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
-import gsap from 'gsap';
 
 export default function menu() {
     const burger = document.querySelector('.page-header__burger');

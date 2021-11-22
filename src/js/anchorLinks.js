@@ -4,6 +4,28 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollToPlugin);
 
 export default function anchorLinks() {
+    const scrollByHash = hash => {
+        const elementToScroll = document.querySelector(hash);
+        if (elementToScroll) {
+            if (window.menuOpen) {
+                window.closeMenu();
+            } else {
+                console.log('menu not open');
+            }
+
+            gsap.to(window, {
+                duration: 4,
+                ease: 'power2.out',
+                scrollTo: {
+                    y: elementToScroll,
+                    autoKill: false,
+                    offsetY: 80
+                }
+            });
+        } else {
+            console.error('No element to scroll');
+        }
+    };
     document.addEventListener('click', event => {
         if (event.target.matches('a') || event.target.closest('a')) {
             const link = event.target.matches('a') ? event.target : event.target.closest('a');
@@ -11,29 +33,9 @@ export default function anchorLinks() {
 
             console.log('Hash', hash);
 
-            if (hash && hash.startsWith('#to-')) {
+            if (hash) {
                 event.preventDefault();
-
-                const elementToScroll = document.getElementById(hash.replace(/^#to\-/, ''));
-                if (elementToScroll) {
-                    if (window.menuOpen) {
-                        window.closeMenu();
-                    } else {
-                        console.log('menu not open');
-                    }
-
-                    gsap.to(window, {
-                        duration: 2,
-                        ease: 'power2.out',
-                        scrollTo: {
-                            y: elementToScroll,
-                            autoKill: false,
-                            offsetY: 80
-                        }
-                    });
-                } else {
-                    console.error('No element to scroll');
-                }
+                scrollByHash(hash);
             }
         }
     });
