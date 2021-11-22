@@ -17,6 +17,7 @@ import intro from './intro';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import whyBrigman from './whyBrigman';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     datepicker();
     video();
     intro();
+    whyBrigman();
 });
 
 window.addEventListener('load', function() {
