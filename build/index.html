@@ -74,7 +74,10 @@
                                             <svg width="14" height="14" aria-hidden="true" class="icon-vk">
                                                 <use xlink:href="#youtube"></use>
                                             </svg>
-                                            YouTube канал
+                                            <span class="page-header__menu-social-link-text">
+                                                YouTube канал
+                                            </span>
+        
                                         </a>
                                     </li>
                                     <li class="page-header__menu-social-list-item">
@@ -82,7 +85,11 @@
                                             <svg width="14" height="14" aria-hidden="true" class="icon-vk">
                                                 <use xlink:href="#vk"></use>
                                             </svg>
-                                            Группа в ВК
+        
+        
+                                            <span class="page-header__menu-social-link-text">
+                                                Группа в ВК
+                                            </span>
                                         </a>
                                     </li>
                                     <li class="page-header__menu-social-list-item">
@@ -90,7 +97,10 @@
                                             <svg width="14" height="14" aria-hidden="true" class="icon-instagram">
                                                 <use xlink:href="#instagram"></use>
                                             </svg>
-                                            Инстаграм
+        
+                                            <span class="page-header__menu-social-link-text">
+                                                Инстаграм
+                                            </span>
                                         </a>
                                     </li>
                                     <li class="page-header__menu-social-list-item">
@@ -98,7 +108,10 @@
                                             <svg width="14" height="14" aria-hidden="true" class="icon-tiktok">
                                                 <use xlink:href="#tiktok"></use>
                                             </svg>
-                                            ТикТок
+        
+                                            <span class="page-header__menu-social-link-text">
+                                                ТикТок
+                                            </span>
                                         </a>
                                     </li>
                                 </ul>
@@ -192,7 +205,11 @@
                     </div>
                 </div>
                 <div class="intro__pc-block">
-                    <img src="img/pc-resized/1.png" alt="" class="intro__pc-block-image">
+                    <picture>
+                        <source srcset="img/mobile-pc.png" media="(max-width: 640px)">
+                        <img src="img/pc-resized/1.png" alt="" class="intro__pc-block-image">
+                    </picture>
+
                 </div>
             </div>
         </div>
@@ -288,92 +305,104 @@
                         Всего 5 шагов и компьютер ваш!
                     </h3>
                 </div>
-                <ol class="how-to-order__list">
-                    <li class="how-to-order__list-item">
-                        <div class="how-to-order__card">
-                            <div class="how-to-order__card-content">
-                                <h4 class="how-to-order__card-title">
-                                    Заявка
-                                </h4>
-                                <div class="how-to-order__card-text">
-                                    <p>
-                                        Вы оставляете заявку на сайте
-                                    </p>
-                                </div>
-                                <a href="#" class="how-to-order__card-link">
-                                    Напишите нам
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="how-to-order__list-item">
-                        <div class="how-to-order__card">
-                            <div class="how-to-order__card-content">
-                                <h4 class="how-to-order__card-title">
-                                    Полное сопровождение
-                                </h4>
-                                <div class="how-to-order__card-text">
-                                    <p>
-                                        Наш специалист учтёт все ваши пожелания и сразу запустит процесс изготовления
-                                        компьютера
-                                    </p>
-                                </div>
+                <div class="how-to-order__slider js-how-to-order-slider">
+                    <div class="swiper-container">
 
-                            </div>
-                        </div>
-                    </li>
-                    <li class="how-to-order__list-item">
-                        <div class="how-to-order__card">
-                            <div class="how-to-order__card-content">
-                                <h4 class="how-to-order__card-title">
-                                    Оплата
-                                </h4>
-                                <div class="how-to-order__card-text">
-                                    <p>
-                                        Как только всё будет согласовано с менеджером, вы сможете оплатить свой заказ.
-                                        Мы
-                                        принимаем оплату как от физических, так и от юридических лиц
-                                    </p>
+
+
+                        <ol class="swiper-wrapper how-to-order__list">
+                            <li class="swiper-slide how-to-order__list-item">
+                                <div class="how-to-order__card">
+                                    <div class="how-to-order__card-content">
+                                        <h4 class="how-to-order__card-title">
+                                            Заявка
+                                        </h4>
+                                        <div class="how-to-order__card-text">
+                                            <p>
+                                                Вы оставляете заявку на сайте
+                                            </p>
+                                        </div>
+                                        <a href="#" class="how-to-order__card-link">
+                                            Напишите нам
+                                        </a>
+                                    </div>
                                 </div>
+                            </li>
+                            <li class="swiper-slide how-to-order__list-item">
+                                <div class="how-to-order__card">
+                                    <div class="how-to-order__card-content">
+                                        <h4 class="how-to-order__card-title">
+                                            Полное сопровождение
+                                        </h4>
+                                        <div class="how-to-order__card-text">
+                                            <p>
+                                                Наш специалист учтёт все ваши пожелания и сразу запустит процесс
+                                                изготовления
+                                                компьютера
+                                            </p>
+                                        </div>
 
-                            </div>
-                        </div>
-                    </li>
-                    <li class="how-to-order__list-item">
-                        <div class="how-to-order__card">
-                            <div class="how-to-order__card-content">
-                                <h4 class="how-to-order__card-title">
-                                    Контроль качества
-                                </h4>
-                                <div class="how-to-order__card-text">
-                                    <p>
-                                        Мы оперативно проведём расширенное тестирование вашего компьютера в различных
-                                        программах и играх. Далее компьютер проходит дополнительный технический контроль
-                                        качества
-                                    </p>
+                                    </div>
                                 </div>
+                            </li>
+                            <li class="swiper-slide how-to-order__list-item">
+                                <div class="how-to-order__card">
+                                    <div class="how-to-order__card-content">
+                                        <h4 class="how-to-order__card-title">
+                                            Оплата
+                                        </h4>
+                                        <div class="how-to-order__card-text">
+                                            <p>
+                                                Как только всё будет согласовано с менеджером, вы сможете оплатить свой
+                                                заказ.
+                                                Мы
+                                                принимаем оплату как от физических, так и от юридических лиц
+                                            </p>
+                                        </div>
 
-                            </div>
-                        </div>
-                    </li>
-                    <li class="how-to-order__list-item">
-                        <div class="how-to-order__card">
-                            <div class="how-to-order__card-content">
-                                <h4 class="how-to-order__card-title">
-                                    Доставка по всей России и СНГ
-                                </h4>
-                                <div class="how-to-order__card-text">
-                                    <p>
-                                        Мы отправим вам компьютер в нашем эксклюзивном защитном ящике транспортной
-                                        компанией. Также имеется возможность самовывоза в г. Ярославль
-                                    </p>
+                                    </div>
                                 </div>
+                            </li>
+                            <li class="swiper-slide how-to-order__list-item">
+                                <div class="how-to-order__card">
+                                    <div class="how-to-order__card-content">
+                                        <h4 class="how-to-order__card-title">
+                                            Контроль качества
+                                        </h4>
+                                        <div class="how-to-order__card-text">
+                                            <p>
+                                                Мы оперативно проведём расширенное тестирование вашего компьютера в
+                                                различных
+                                                программах и играх. Далее компьютер проходит дополнительный технический
+                                                контроль
+                                                качества
+                                            </p>
+                                        </div>
 
-                            </div>
-                        </div>
-                    </li>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide how-to-order__list-item">
+                                <div class="how-to-order__card">
+                                    <div class="how-to-order__card-content">
+                                        <h4 class="how-to-order__card-title">
+                                            Доставка по всей России и СНГ
+                                        </h4>
+                                        <div class="how-to-order__card-text">
+                                            <p>
+                                                Мы отправим вам компьютер в нашем эксклюзивном защитном ящике
+                                                транспортной
+                                                компанией. Также имеется возможность самовывоза в г. Ярославль
+                                            </p>
+                                        </div>
 
-                </ol>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ol>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -433,7 +462,7 @@
                         Напишите нам
                     </a>
                 </div>
-                <div class="why-brigman__slider">
+                <div class="why-brigman__slider js-why-brigman-slider">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -581,136 +610,144 @@
             <div class="ticker__track">
                 <div class="ticker__inner-track">
                     <div class="ticker__item">
-                        Как мы создаем мечту?&nbsp;—&nbsp;
+                        Как мы создаем мечту?<span>&nbsp;—&nbsp;</span>
                     </div>
                 </div>
 
             </div>
         </div>
-        <div class="scheme__stages">
-            <div class="scheme__stages-layers">
-                <div class="scheme__stages-layer">
-                    <div class="scheme__stages-layer-bg">
-                        <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
-                    </div>
-                    <div class="scheme__stages-layer-content">
-                        <h3 class="scheme__stages-layer-title">
-                            Подбор<br> конфигурации
-                        </h3>
-                        <div class="scheme__stages-layer-text">
-                            <p>
-                                Подбираем оптимальную конфигурацию компьютера под ваши задачи: игры, стриминг, работа с
-                                графикой и прочее
-                            </p>
+        <div class="scheme__slider">
+
+            <div class="swiper-container scheme__stages">
+                <div class="swiper-wrapper scheme__stages-layers">
+                    <div class="swiper-slide scheme__stages-layer">
+                        <div class="scheme__stages-layer-bg">
+                            <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
+                        </div>
+                        <div class="scheme__stages-layer-content">
+                            <h3 class="scheme__stages-layer-title">
+                                Подбор<br> конфигурации
+                            </h3>
+                            <div class="scheme__stages-layer-text">
+                                <p>
+                                    Подбираем оптимальную конфигурацию компьютера под ваши задачи: игры, стриминг,
+                                    работа с
+                                    графикой и прочее
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="scheme__stages-layer">
-                    <div class="scheme__stages-layer-bg">
-                        <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
-                    </div>
-                    <div class="scheme__stages-layer-content">
-                        <h3 class="scheme__stages-layer-title">
-                            Сборка<br>
-                            компьютера
-                        </h3>
-                        <div class="scheme__stages-layer-text">
-                            <p>
-                                Собираем системный блок и устанавливаем СВО (систему водяного охлаждения) руками
-                                профессионалов с многолетним опытом
-                            </p>
+                    <div class="swiper-slide scheme__stages-layer">
+                        <div class="scheme__stages-layer-bg">
+                            <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
+                        </div>
+                        <div class="scheme__stages-layer-content">
+                            <h3 class="scheme__stages-layer-title">
+                                Сборка<br>
+                                компьютера
+                            </h3>
+                            <div class="scheme__stages-layer-text">
+                                <p>
+                                    Собираем системный блок и устанавливаем СВО (систему водяного охлаждения) руками
+                                    профессионалов с многолетним опытом
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="scheme__stages-layer">
-                    <div class="scheme__stages-layer-bg">
-                        <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
-                    </div>
-                    <div class="scheme__stages-layer-content">
-                        <h3 class="scheme__stages-layer-title">
-                            Тестирование
-                        </h3>
-                        <div class="scheme__stages-layer-text">
-                            <p>
-                                Проводим 10-часовое тестирование в программах и играх, близких к вашим задачам.
+                    <div class="swiper-slide scheme__stages-layer">
+                        <div class="scheme__stages-layer-bg">
+                            <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
+                        </div>
+                        <div class="scheme__stages-layer-content">
+                            <h3 class="scheme__stages-layer-title">
+                                Тестирование
+                            </h3>
+                            <div class="scheme__stages-layer-text">
+                                <p>
+                                    Проводим 10-часовое тестирование в программах и играх, близких к вашим задачам.
 
-                            </p>
-                            <p>
-                                Также дополнительно проводим стресс тест компьютерных комплектующих, а результаты
-                                фиксируем. Устанавливаем всё необходимое лицензионное ПО
+                                </p>
+                                <p>
+                                    Также дополнительно проводим стресс тест компьютерных комплектующих, а
+                                    результаты
+                                    фиксируем. Устанавливаем всё необходимое лицензионное ПО
 
-                            </p>
+                                </p>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="scheme__stages-layer">
-                    <div class="scheme__stages-layer-bg">
-                        <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
-                    </div>
-                    <div class="scheme__stages-layer-content">
-                        <h3 class="scheme__stages-layer-title">
-                            Контроль<br>
-                            качества
-                        </h3>
-                        <div class="scheme__stages-layer-text">
-                            <p>
-                                Проводим дополнительный контроль
+                    <div class="swiper-slide scheme__stages-layer">
+                        <div class="scheme__stages-layer-bg">
+                            <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
+                        </div>
+                        <div class="scheme__stages-layer-content">
+                            <h3 class="scheme__stages-layer-title">
+                                Контроль<br>
                                 качества
-                            </p>
+                            </h3>
+                            <div class="scheme__stages-layer-text">
+                                <p>
+                                    Проводим дополнительный контроль
+                                    качества
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide scheme__stages-layer">
+                        <div class="scheme__stages-layer-bg">
+                            <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
+                        </div>
+                        <div class="scheme__stages-layer-content">
+                            <h3 class="scheme__stages-layer-title">
+                                Подготовка к<br> отправке
+                            </h3>
+                            <div class="scheme__stages-layer-text">
+                                <p>
+                                    Упаковываем системный блок и всю комплектацию в ударостойкий, не подверженный
+                                    вибрации
+                                    кастомный брендовый ящик
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="scheme__stages-layer">
-                    <div class="scheme__stages-layer-bg">
-                        <img src="img/layer.jpg" alt="" class="scheme__stages-layer-bg-image">
+                <div class="scheme__stages-pagination">
+                    <div class="scheme__stages-pagination-bullet active">
+                        <span class="scheme__stages-pagination-bullet-text">
+                            01
+                        </span>
+
                     </div>
-                    <div class="scheme__stages-layer-content">
-                        <h3 class="scheme__stages-layer-title">
-                            Подготовка к<br> отправке
-                        </h3>
-                        <div class="scheme__stages-layer-text">
-                            <p>
-                                Упаковываем системный блок и всю комплектацию в ударостойкий, не подверженный вибрации
-                                кастомный брендовый ящик
-                            </p>
-                        </div>
+                    <div class="scheme__stages-pagination-bullet">
+
+                        <span class="scheme__stages-pagination-bullet-text">
+                            02
+                        </span>
+                    </div>
+                    <div class="scheme__stages-pagination-bullet">
+
+                        <span class="scheme__stages-pagination-bullet-text">
+                            03
+                        </span>
+                    </div>
+                    <div class="scheme__stages-pagination-bullet">
+
+                        <span class="scheme__stages-pagination-bullet-text">
+                            04
+                        </span>
+                    </div>
+                    <div class="scheme__stages-pagination-bullet">
+
+                        <span class="scheme__stages-pagination-bullet-text">
+                            05
+                        </span>
                     </div>
                 </div>
             </div>
-            <div class="scheme__stages-pagination">
-                <div class="scheme__stages-pagination-bullet active">
-                    <span class="scheme__stages-pagination-bullet-text">
-                        01
-                    </span>
 
-                </div>
-                <div class="scheme__stages-pagination-bullet">
-
-                    <span class="scheme__stages-pagination-bullet-text">
-                        02
-                    </span>
-                </div>
-                <div class="scheme__stages-pagination-bullet">
-
-                    <span class="scheme__stages-pagination-bullet-text">
-                        03
-                    </span>
-                </div>
-                <div class="scheme__stages-pagination-bullet">
-
-                    <span class="scheme__stages-pagination-bullet-text">
-                        04
-                    </span>
-                </div>
-                <div class="scheme__stages-pagination-bullet">
-
-                    <span class="scheme__stages-pagination-bullet-text">
-                        05
-                    </span>
-                </div>
-            </div>
         </div>
+
     </div>
 </section>
 

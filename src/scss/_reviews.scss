@@ -1,8 +1,12 @@
 .reviews {
     position: relative;
     z-index: 1;
-  
+
     padding-bottom: 20rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 8rem;
+    }
 }
 
 .reviews__bg {
@@ -16,14 +20,17 @@
     flex-direction: column;
     justify-content: flex-start;
     pointer-events: none;
+
+    @include breakpoint(mobile) {
+        top: 0;
+        bottom: -8rem;
+    }
 }
 
 .reviews__bg-image {
     display: block;
     height: auto;
     width: 100%;
-    
-    
 }
 
 .reviews__bg-blur {
@@ -34,10 +41,18 @@
     width: 220rem;
     height: 220rem;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        width: 100rem;
+        height: 100rem;
+    }
 }
 
 .reviews__heading {
     margin-bottom: 3.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2.8rem;
+    }
 }
 
 .reviews__row {
@@ -45,6 +60,11 @@
     position: relative;
     z-index: 10;
     padding-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        flex-direction: column;
+    }
 }
 
 .reviews__info {
@@ -53,6 +73,13 @@
     width: 52rem;
     flex-shrink: 0;
     padding-right: 6rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0;
+        flex-shrink: 1;
+        margin-bottom: 3rem;
+    }
 }
 
 .reviews__large-heading {
@@ -62,6 +89,13 @@
     text-transform: uppercase;
     font-family: var(--helios);
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .reviews__link {
@@ -74,7 +108,13 @@
     text-align: center;
     text-transform: uppercase;
     padding: 1.2rem 2.4rem;
-    transition: color .2s, background-color .2s, border-color .2s;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    display: inline-flex;
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        padding: 0.8rem 1.4rem;
+    }
 
     .no-touch &:hover,
     .touch &:active {
@@ -96,6 +136,16 @@
             width: 53rem;
         }
     }
+
+    @include breakpoint(mobile) {
+        .swiper-slide {
+            width: 31rem;
+        }
+
+        .swiper-container {
+            overflow: visible;
+        }
+    }
 }
 
 .reviews__slider-card {
@@ -106,33 +156,50 @@
     background: rgba(255, 255, 255, 0.03);
     border-radius: 2rem;
 
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        padding-bottom: 3rem;
+    }
+
     .no-touch &:hover {
         .reviews__slider-card-image-container {
             opacity: 0;
             visibility: hidden;
-            transition: opacity .3s, visibility 0s linear .3s;
+            transition: opacity 0.3s, visibility 0s linear 0.3s;
         }
 
         .reviews__slider-card-link {
             opacity: 1;
             visibility: inherit;
-            transition: opacity .3s, visibility .3s;
+            transition: opacity 0.3s, visibility 0.3s;
         }
 
         .reviews__slider-card-content {
             transform: translateY(-15rem);
+
+            @include breakpoint(mobile) {
+                transform: translateY(-10rem);
+            }
         }
     }
 }
 
 .reviews__slider-card-content {
-    transition: transform .3s;
+    transition: transform 0.3s;
 }
 
 .reviews__slider-card-image-container {
     position: relative;
     margin-bottom: 5rem;
-    transition: opacity .3s, visibility .3s;
+    transition: opacity 0.3s, visibility 0.3s;
+    border-radius: 2rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
     &::before {
         content: '';
         display: block;
@@ -156,11 +223,22 @@
     line-height: 3.5rem;
     text-transform: uppercase;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .reviews__slider-card-author-name {
     font-size: 1.6rem;
     line-height: 2.2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
 }
 
 .reviews__slider-card-author-role {
@@ -168,6 +246,10 @@
     font-size: 1.6rem;
     line-height: 2.2rem;
     color: rgba(white, 0.4);
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
 }
 
 .reviews__slider-card-link {
@@ -178,11 +260,19 @@
     line-height: 1.9rem;
     text-align: center;
     text-transform: uppercase;
-    padding: .8rem 1.4rem;
-    border: 1px solid #FFFFFF;
+    padding: 0.8rem 1.4rem;
+    border: 1px solid #ffffff;
     border-radius: 5rem;
-
+    display: inline-flex;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .3s, visibility 0s linear .3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    @include breakpoint(mobile) {
+        left: 2rem;
+        bottom: 2rem;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        padding: 0.8rem 1.4rem;
+    }
 }

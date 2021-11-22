@@ -2,10 +2,22 @@
     margin-bottom: 34rem;
     position: relative;
     z-index: 5;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
 .faq__heading {
     margin-bottom: 3.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2.8rem;
+    }
 }
 
 .faq__large-heading {
@@ -16,17 +28,32 @@
     margin-bottom: 5.5rem;
     font-family: var(--helios);
     max-width: 76rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .faq__row {
     display: grid;
     grid-template-columns: minmax(0, 33rem) minmax(0, 1fr);
     grid-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        display: contents;
+    }
 }
 
 .faq__col {
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 .faq__medium-heading {
@@ -36,12 +63,24 @@
     margin-bottom: 3.5rem;
     font-family: var(--helios);
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        margin-bottom: 2rem;
+
+        display: none;
+    }
 }
 
 .faq__popular-list {
     display: flex;
     flex-direction: column;
     margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .faq__popular-list-item {
@@ -58,6 +97,7 @@
     padding-left: 4rem;
     display: block;
     position: relative;
+    display: inline-flex;
 
     &.active {
         color: var(--primary-color);
@@ -75,8 +115,6 @@
         margin-right: 2rem;
         flex-shrink: 0;
     }
-
-
 }
 
 .faq__link {
@@ -91,6 +129,15 @@
     align-self: flex-start;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 
+    @include breakpoint(mobile) {
+        order: 10;
+        padding: 0.8rem 1.4rem;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+
+        margin-top: 3.2rem;
+    }
+
     &:hover {
         background-color: var(--primary-color);
         color: white;
@@ -102,6 +149,11 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 2.4rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 0.2rem;
+    }
 }
 
 .faq__list-item {
@@ -146,20 +198,23 @@
     opacity: 0;
     visibility: hidden;
     z-index: 5;
-    transition: opacity .4s, visibility 0s linear .4s;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
     &.active {
         opacity: 1;
         visibility: inherit;
         z-index: 10;
         position: relative;
-        transition: opacity .4s, visibility .4s;
-       
+        transition: opacity 0.4s, visibility 0.4s;
     }
 }
- 
+
 .faq__card {
     height: 11rem;
     position: relative;
+
+    @include breakpoint(mobile) {
+        height: auto;
+    }
 }
 
 .faq__card-inner {
@@ -176,9 +231,13 @@
     color: white;
     transition: background-color 0.3s;
 
+    @include breakpoint(mobile) {
+        position: relative;
+    }
+
     .faq__card.active & {
         background: #6a05e5;
-       
+
         z-index: 30;
         transition: background-color 0.3s;
     }
@@ -197,6 +256,13 @@
     cursor: pointer;
     user-select: none;
     justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        height: 7.2rem;
+        padding: 0.5rem 2rem;
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
 }
 
 .faq__card-btn-plus {
@@ -205,6 +271,12 @@
     flex-shrink: 0;
     margin-left: 3rem;
     position: relative;
+
+    @include breakpoint(mobile) {
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-left: 2rem;
+    }
     & > span {
         width: 100%;
         height: 0.2rem;
@@ -242,8 +314,15 @@
     line-height: 2.2rem;
     padding: 0 4rem;
     padding-bottom: 2rem;
-   
+
     min-height: 13.4rem;
+
+    @include breakpoint(mobile) {
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        padding: 0 2rem;
+        padding-bottom: 2rem;
+        min-height: auto;
+    }
 }
-
-

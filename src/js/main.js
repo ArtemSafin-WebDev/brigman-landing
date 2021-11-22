@@ -22,6 +22,7 @@ import menu from './menu';
 import scheme from './scheme';
 import faq from './faq';
 import reviews from './reviews';
+import howToOrderSlider from './howToOrder';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scheme();
     faq();
     reviews();
+    howToOrderSlider();
 });
 
 window.addEventListener('load', function() {

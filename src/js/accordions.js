@@ -9,14 +9,14 @@ export default function accordions() {
         gsap.to(element, {
             height: 'auto',
             duration: SPEED,
-            // onComplete: () => ScrollTrigger.refresh()
+            onComplete: () => ScrollTrigger.refresh()
         });
     };
     const closeAccordion = element => {
         gsap.to(element, {
             height: 0,
             duration: SPEED,
-            // onComplete: () => ScrollTrigger.refresh()
+            onComplete: () => ScrollTrigger.refresh()
         });
     };
 

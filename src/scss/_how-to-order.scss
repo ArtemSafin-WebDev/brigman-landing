@@ -2,6 +2,10 @@
     position: relative;
     z-index: 1;
     margin-bottom: 26rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .how-to-order__gradient {
@@ -14,16 +18,47 @@
     height: 208rem;
     position: absolute;
     pointer-events: none;
+
+    @include breakpoint(mobile) {
+        width: 230rem;
+        height: 230rem;
+    }
 }
 
 .how-to-order__grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-gap: 0.5rem;
+    @include breakpointMF(small-tablet) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 0.5rem;
+    }
+}
+
+.how-to-order__slider {
+   
+    @include breakpointMF(small-tablet) {
+        display: contents;
+
+        .swiper-container {
+            display: contents;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        .swiper-container {
+            overflow: visible;
+        }
+
+        .swiper-slide {
+            width: 31rem;
+        }
+    }
 }
 
 .how-to-order__small-heading {
     margin-bottom: 3.5rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .how-to-order__large-heading {
@@ -32,10 +67,19 @@
     line-height: 6rem;
     text-transform: uppercase;
     font-family: var(--helios);
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .how-to-order__list {
-    display: contents;
+    @include breakpointMF(small-tablet) {
+        display: contents;
+    }
 }
 
 .how-to-order__list-item {
@@ -56,12 +100,24 @@
     padding: 4rem;
     min-height: 39.5rem;
 
+    @include breakpoint(mobile) {
+        min-height: 35rem;
+        padding: 2rem;
+    }
+
     &::before {
         content: counter(ordered-list, decimal-leading-zero);
         font-size: 5rem;
         line-height: 6rem;
         text-transform: uppercase;
         margin-bottom: 3rem;
+        font-family: var(--helios);
+
+        @include breakpoint(mobile) {
+            font-weight: normal;
+            font-size: 3.2rem;
+            line-height: 1.2;
+        }
     }
 }
 
@@ -77,6 +133,13 @@
     margin-bottom: 1.2rem;
     text-transform: uppercase;
 
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 2rem;
+        line-height: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -86,6 +149,12 @@
     font-size: 2rem;
     line-height: 2.4rem;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-bottom: 2.5rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -100,8 +169,14 @@
     border: 1px solid #ffffff;
     border-radius: 5rem;
     align-self: flex-start;
-
+    display: inline-flex;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+    @include breakpoint(mobile) {
+        padding: 0.8rem 1.6rem;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
 
     .no-touch &:hover,
     .touch &:active {

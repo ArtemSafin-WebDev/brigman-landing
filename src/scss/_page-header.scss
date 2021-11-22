@@ -21,6 +21,10 @@
     position: relative;
     z-index: 1;
 
+    @include breakpoint(mobile) {
+        padding: 2rem 0;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -34,6 +38,13 @@
         background-size: contain;
         background-position: left 8.5rem top;
         background-repeat: no-repeat;
+
+        @include breakpoint(mobile) {
+            left: calc(-1 * var(--content-padding));
+            right: calc(-1 * var(--content-padding));
+            width: auto;
+            background-position: left top;
+        }
     }
 }
 
@@ -47,12 +58,20 @@
     width: 17rem;
     height: auto;
     display: block;
+
+    @include breakpoint(mobile) {
+        width: 10rem;
+    }
 }
 
 .page-header__nav {
     width: 20%;
     flex-grow: 1;
     padding: 0 3rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
     & > ul {
         display: flex;
         align-items: center;
@@ -82,6 +101,10 @@
     flex-shrink: 0;
     position: relative;
     z-index: 150;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .page-header__button {
@@ -95,6 +118,7 @@
     color: white;
     white-space: nowrap;
     flex-shrink: 0;
+
     &::before {
         content: '';
         position: absolute;
@@ -131,30 +155,50 @@
     position: relative;
     z-index: 150;
 
+    @include breakpoint(mobile) {
+        margin-left: auto;
+        gap: 0.4rem;
+    }
+
     & > span {
         width: 4rem;
         height: 0.2rem;
         background-color: #fff;
         flex-shrink: 0;
-        transition: opacity 0.2s, transform 0.2s, transform .2s;
+        transition: opacity 0.2s, transform 0.2s, transform 0.2s;
+
+        @include breakpoint(mobile) {
+            width: 2rem;
+        }
     }
 
     .mobile-menu-open & {
         & > span {
             &:nth-child(1) {
-                transform: translateY(.7rem) rotate(30deg);
-                
+                transform: translateY(0.7rem) rotate(30deg);
             }
             &:nth-child(2) {
                 opacity: 0;
             }
             &:nth-child(3) {
-                transform: translateY(-.7rem) rotate(-30deg);
+                transform: translateY(-0.7rem) rotate(-30deg);
+            }
+        }
+
+        @include breakpoint(mobile) {
+            & > span {
+                &:nth-child(1) {
+                    transform: translateY(0.6rem) rotate(30deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: translateY(-0.6rem) rotate(-30deg);
+                }
             }
         }
     }
-
-    
 }
 
 .page-header__menu {
@@ -172,7 +216,7 @@
     color: white;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .4s, visibility 0s linear .4s;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
 
     .container {
         display: flex;
@@ -184,7 +228,7 @@
         right: var(--sb-width, 0);
         opacity: 1;
         visibility: inherit;
-        transition: opacity .4s, visibility .4s;
+        transition: opacity 0.4s, visibility 0.4s;
     }
 }
 
@@ -197,10 +241,20 @@
     z-index: 1;
     padding-top: 19rem;
     padding-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 10rem;
+        padding-bottom: 3.5rem;
+        padding-left: 0;
+    }
 }
 
 .page-header__menu-nav {
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
 
     & > ul {
         display: flex;
@@ -208,6 +262,10 @@
 
         & > li {
             margin-bottom: 2.5rem;
+
+            @include breakpoint(mobile) {
+                margin-bottom: 2rem;
+            }
             &:last-child {
                 margin-bottom: 0;
             }
@@ -217,6 +275,11 @@
                 line-height: 1.2;
                 text-transform: uppercase;
                 font-family: var(--helios);
+
+                @include breakpoint(mobile) {
+                    font-size: 1.6rem;
+                    line-height: 1.2;
+                }
 
                 &:hover {
                     color: var(--primary-color);
@@ -231,6 +294,10 @@
     align-items: center;
     gap: 6.4rem;
     margin-top: auto;
+
+    @include breakpoint(mobile) {
+        gap: 1rem;
+    }
 }
 
 .page-header__menu-social-list-item {
@@ -262,6 +329,10 @@
     right: 0rem;
     bottom: 0;
     width: 70rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 
     &::before {
         content: '';
@@ -297,4 +368,11 @@
     font-weight: normal;
     font-size: 2rem;
     line-height: 2.4rem;
+}
+
+
+.page-header__menu-social-link-text {
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }

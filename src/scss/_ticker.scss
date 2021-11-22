@@ -1,23 +1,27 @@
 .ticker {
     position: relative;
-    height: 15rem;
+    
 }
 
 .ticker__track {
-    display: flex;
-    align-items: center;
-    // position: absolute;
-    // left: 50%;
-    // top: 0;
-    // transform: translateX(-50%);
-    // height: 100%;
+   
+
+    @include breakpointMF(small-tablet) {
+        display: flex;
+        align-items: center;
+    }
+   
 }
 
 .ticker__inner-track {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
+   
     // animation: ticker 18s linear infinite;
+
+    @include breakpointMF(small-tablet) {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
 }
 
 .ticker__item {
@@ -27,14 +31,18 @@
     text-transform: uppercase;
     white-space: nowrap;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 3.2rem;
+        line-height: 4rem;
+        white-space: initial;
+        flex-shrink: 1;
+
+        span:not([class]) {
+            display: none;
+        }
+    }
 }
 
-@keyframes ticker {
-    // from {
-    //     transform: translateX(0);
-    // }
 
-    // to {
-    //     transform: translateX(-100%);
-    // }
-}

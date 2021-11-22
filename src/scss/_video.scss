@@ -1,22 +1,29 @@
 .video {
     margin-bottom: 26rem;
+    position: relative;
+    z-index: 50;
+    --plyr-color-main: #9c5de0;
 
-    --plyr-color-main: #9C5DE0;
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .video__card {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    border-radius: 4rem;
-    overflow: hidden;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    cursor: pointer;
-    &::before {
-        content: '';
-        width: 1px;
-        padding-bottom: 56.25%;
+    @include breakpointMF(small-tablet) {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        border-radius: 4rem;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        cursor: pointer;
+        &::before {
+            content: '';
+            width: 1px;
+            padding-bottom: 56.25%;
+        }
     }
 }
 
@@ -29,6 +36,12 @@
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
 
+    @include breakpoint(mobile) {
+        right: 2rem;
+        top: 2rem;
+        display: none;
+    }
+
     .video-mode & {
         opacity: 1;
         visibility: inherit;
@@ -40,16 +53,37 @@
         height: 2rem;
         fill: white;
         display: block;
+
+        @include breakpoint(mobile) {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
     }
 }
 
 .video__card-media {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    @include breakpointMF(small-tablet) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    @include breakpoint(mobile) {
+        position: relative;
+        border-radius: 2rem;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        margin-bottom: 2rem;
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 56.25%;
+        }
+    }
 
     &::after {
         content: '';
@@ -104,24 +138,36 @@
     height: 100%;
 }
 
-.video__card-content {
-    width: 50%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 5rem;
-    padding-top: 4rem;
-    transition: opacity .4s, visibility .4s;
+.video__card-heading {
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
 
-    .video-mode & {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity .4s, visibility 0s linear .4s;
+.video__card-content {
+    @include breakpointMF(small-tablet) {
+        width: 50%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 5rem;
+        padding-top: 4rem;
+        transition: opacity 0.4s, visibility 0.4s;
+
+        .video-mode & {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s, visibility 0s linear 0.4s;
+        }
     }
 }
 
 .video__card-inner {
     margin-top: auto;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
 }
 
 .video__card-title {
@@ -129,6 +175,12 @@
     line-height: 5.5rem;
     margin-bottom: 4.5rem;
     font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .video__card-link {
@@ -140,6 +192,12 @@
     text-transform: uppercase;
     padding: 1.2rem 2.4rem;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    display: inline-flex;
+    @include breakpoint(mobile) {
+        padding: 0.8rem 1.4rem;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
 
     .no-touch &:hover,
     .touch &:active {

@@ -1,63 +1,80 @@
 .scheme {
-   
     padding-bottom: 6rem;
     margin-bottom: 20rem;
+
+    @include breakpoint(mobile) {
+        padding-bottom: 0;
+        margin-bottom: 8rem;
+    }
 }
 
 .scheme__heading {
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
 }
 
 .scheme__ticker {
     margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .scheme__stages {
-    height: 74rem;
-    position: relative;
-    // background: #1b1025;
-   
-    border-radius: 4rem;
-    overflow: hidden;
-    backface-visibility: hidden;
-    transform: translateZ(0);
+    @include breakpointMF(small-tablet) {
+        height: 74rem;
+        position: relative;
+        border-radius: 4rem;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        width: 100%;
+        margin: 0;
+    }
 
+    @include breakpoint(mobile) {
+        position: relative;
+    }
 }
 
 .scheme__stages-layers {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    @include breakpointMF(small-tablet) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .scheme__stages-layer {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 8.5rem;
-    padding-left: 25rem;
-    &:first-child {
-        opacity: 1;
-        visibility: inherit;
+    @include breakpointMF(small-tablet) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 8.5rem;
+        padding-left: 25rem;
+        &:first-child {
+            opacity: 1;
+            visibility: inherit;
+        }
     }
 }
 
 .scheme__stages-layer-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
     &::after {
         content: '';
         position: absolute;
@@ -66,6 +83,24 @@
         width: 100%;
         height: 100%;
         background: rgba(#100916, 0.7);
+    }
+    @include breakpointMF(small-tablet) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    @include breakpoint(mobile) {
+        height: 20rem;
+        position: relative;
+        border-radius: 2rem;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        margin-bottom: 8.5rem;
     }
 }
 
@@ -79,11 +114,13 @@
 }
 
 .scheme__stages-layer-content {
-    width: 100%;
-    max-width: 88rem;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    @include breakpointMF(small-tablet) {
+        width: 100%;
+        max-width: 88rem;
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
 }
 
 .scheme__stages-layer-title {
@@ -93,6 +130,12 @@
     text-transform: uppercase;
     font-family: var(--helios);
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 2.2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .scheme__stages-layer-text {
@@ -100,8 +143,17 @@
     font-size: 3.2rem;
     line-height: 4rem;
 
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+
     p {
         margin-bottom: 2rem;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1.5rem;
+        }
         &:last-child {
             margin-bottom: 0;
         }
@@ -109,37 +161,78 @@
 }
 
 .scheme__stages-pagination {
-    left: 3rem;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    z-index: 80;
-    position: absolute;
+    @include breakpointMF(small-tablet) {
+        left: 3rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        z-index: 80;
+        position: absolute;
+    }
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        top: 22rem;
+        width: 100%;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 80;
+    }
 }
 
 .scheme__stages-pagination-bullet {
-    font-weight: normal;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    &::before {
-        content: '';
-        height: 1px;
-        width: 8rem;
-        margin-right: 2rem;
-        background: white;
-        transition: transform 0.2s;
-        transform-origin: left center;
-        transform: scaleX(0.5);
+    @include breakpointMF(small-tablet) {
+        font-weight: normal;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: '';
+            height: 1px;
+            width: 8rem;
+            margin-right: 2rem;
+            background: white;
+            transition: transform 0.2s;
+            transform-origin: left center;
+            transform: scaleX(0.5);
+        }
+
+        &.active {
+            &::before {
+                transform: scaleX(1);
+            }
+        }
     }
 
-    &.active {
+    @include breakpoint(mobile) {
+        
+        padding: 1rem 0;
+        position: relative;
+
         &::before {
-            transform: scaleX(1);
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        &.active {
+            color: white;
+
+            &::before {
+                opacity: 1;
+            }
         }
     }
 }
@@ -149,10 +242,32 @@
     font-size: 2rem;
     line-height: 2.4rem;
     text-transform: uppercase;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
     opacity: 0;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        color: rgba(white, 0.4);
+        transition: color 0.2s;
+        text-transform: uppercase;
+        opacity: 1;
+    }
 
     .scheme__stages-pagination-bullet.active & {
         opacity: 1;
+
+        @include breakpoint(mobile) {
+            color: white;
+        }
+    }
+}
+
+
+.scheme__slider {
+    @include breakpointMF(small-tablet) {
+        display: contents;
+
+       
     }
 }

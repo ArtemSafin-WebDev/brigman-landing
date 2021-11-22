@@ -1,6 +1,8 @@
 import gsap from 'gsap';
 
 export default function ticker() {
+
+    if (window.matchMedia("(max-width: 640px)").matches) return;
     const elements = Array.from(document.querySelectorAll('.js-ticker'));
 
     elements.forEach(element => {

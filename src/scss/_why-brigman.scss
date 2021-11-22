@@ -1,8 +1,12 @@
 .why-brigman {
     margin-bottom: 20rem;
-   
+
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .why-brigman__bg {
@@ -13,12 +17,17 @@
     bottom: 0;
     z-index: -1;
 
+    @include breakpoint(mobile) {
+        top: 5rem;
+    }
+
     img {
         display: block;
         width: 100%;
         max-height: 100%;
         object-fit: contain;
         object-position: left bottom;
+        max-width: none;
     }
 
     &::after {
@@ -29,23 +38,45 @@
         bottom: 0;
         width: 100%;
         height: 30rem;
+
+        @include breakpoint(mobile) {
+            height: auto;
+            top: 10rem;
+            height: 10rem;
+        }
     }
 }
 
 .why-brigman__row {
     display: flex;
     padding-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0;
+    }
 }
 
 .why-brigman__heading-block {
-    width: 52rem;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
+    @include breakpointMF(small-tablet) {
+        width: 52rem;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .why-brigman__small-heading {
     margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.8rem;
+    }
 }
 
 .why-brigman__large-heading {
@@ -55,6 +86,13 @@
     text-transform: uppercase;
     font-family: var(--helios);
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .why-brigman__link {
@@ -68,6 +106,12 @@
     margin-top: auto;
     align-self: flex-start;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    display: inline-flex;
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        padding: 0.8rem 1.4rem;
+    }
 
     .no-touch &:hover,
     .touch &:active {
@@ -83,12 +127,20 @@
         margin: 0;
     }
 
-    .swiper-wrapper {
-        gap: 0.8rem;
+    @include breakpointMF(small-tablet) {
+        .swiper-wrapper {
+            gap: 0.8rem;
+        }
+
+        .swiper-slide {
+            width: 53rem;
+        }
     }
 
-    .swiper-slide {
-        width: 53rem;
+    @include breakpoint(mobile) {
+        .swiper-slide {
+            width: 31rem;
+        }
     }
 }
 
@@ -100,6 +152,11 @@
     padding: 4rem;
     background: #1b1025;
     border-radius: 2rem;
+
+    @include breakpoint(mobile) {
+        min-height: 35rem;
+        padding: 2rem;
+    }
 }
 
 .why-brigman__slider-card-number {
@@ -109,6 +166,12 @@
     font-family: var(--helios);
     color: #6a05e5;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-weight: normal;
+        font-size: 3.2rem;
+        line-height: 1.2;
+    }
 }
 
 .why-brigman__slider-card-content {
@@ -122,10 +185,21 @@
     text-transform: uppercase;
     margin-bottom: 2rem;
     font-family: var(--helios);
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 2.2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .why-brigman__slider-card-text {
     font-weight: normal;
     font-size: 1.6rem;
     line-height: 2.2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
 }

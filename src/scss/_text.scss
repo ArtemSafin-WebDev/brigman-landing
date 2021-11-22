@@ -4,6 +4,11 @@
     text-transform: uppercase;
     color: white;
     font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
     &::before {
         content: '';
         width: 1rem;

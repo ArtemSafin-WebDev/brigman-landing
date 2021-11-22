@@ -2,6 +2,10 @@
     margin-bottom: 32rem;
     position: relative;
     z-index: 2;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 8rem;
+    }
 }
 
 .our-approach__heading {
@@ -12,4 +16,10 @@
     max-width: 88rem;
     font-size: 5rem;
     line-height: 5.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        max-width: none;
+    }
 }

@@ -13,6 +13,10 @@
     --primary-color: #9C5DE0;
     --helios: 'HeliosExtC', sans-serif;
     --golos: 'Golos Text', sans-serif;
+
+    @include breakpoint(mobile) {
+        --content-padding: 2rem;
+    }
     
 }
 
@@ -23,6 +27,10 @@ html {
     -webkit-text-size-adjust: 100%;
 
     @include noHighlight();
+
+    @include breakpoint(mobile) {
+        font-size: 10px;
+    }
 }
 
 body {
