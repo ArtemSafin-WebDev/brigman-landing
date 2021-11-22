@@ -3,20 +3,20 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function accordions() {
-    const SPEED = 0.7;
+    const SPEED = 0.3;
 
     const openAccordion = element => {
         gsap.to(element, {
             height: 'auto',
             duration: SPEED,
-            onComplete: () => ScrollTrigger.refresh()
+            // onComplete: () => ScrollTrigger.refresh()
         });
     };
     const closeAccordion = element => {
         gsap.to(element, {
             height: 0,
             duration: SPEED,
-            onComplete: () => ScrollTrigger.refresh()
+            // onComplete: () => ScrollTrigger.refresh()
         });
     };
 
