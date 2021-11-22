@@ -1,0 +1,112 @@
+.how-to-order {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 26rem;
+}
+
+.how-to-order__gradient {
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: none;
+    width: 208rem;
+    height: 208rem;
+    position: absolute;
+    pointer-events: none;
+}
+
+.how-to-order__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 0.5rem;
+}
+
+.how-to-order__small-heading {
+    margin-bottom: 3.5rem;
+}
+
+.how-to-order__large-heading {
+    font-weight: normal;
+    font-size: 5rem;
+    line-height: 6rem;
+    text-transform: uppercase;
+    font-family: var(--helios);
+}
+
+.how-to-order__list {
+    display: contents;
+}
+
+.how-to-order__list-item {
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+        display: none;
+    }
+}
+
+.how-to-order__card {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 2rem;
+    padding: 4rem;
+    min-height: 39.5rem;
+
+    &::before {
+        content: counter(ordered-list, decimal-leading-zero);
+        font-size: 5rem;
+        line-height: 6rem;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+    }
+}
+
+.how-to-order__card-content {
+    margin-top: auto;
+}
+
+.how-to-order__card-title {
+    font-weight: normal;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-family: var(--helios);
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.how-to-order__card-text {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 3rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.how-to-order__card-link {
+    padding: 0.8rem 1.4rem;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    border-radius: 5rem;
+    align-self: flex-start;
+
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: var(--primary-color);
+        color: white;
+        border-color: var(--primary-color);
+    }
+}

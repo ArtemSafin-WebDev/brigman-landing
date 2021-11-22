@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <title>
+        Главная страница
+    </title>
+</head>
+
+<body class="no-touch" ontouchstart="">
+    <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+        <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 35.64 21.73" id="close" xmlns="http://www.w3.org/2000/svg"><path d="M-.003 20.008l34.641-20 1 1.732-34.64 20z"/><path d="M.003 1.738l1-1.732 34.641 20-1 1.732z"/></symbol><symbol viewBox="0 0 33 33" id="instagram" xmlns="http://www.w3.org/2000/svg"><path d="M16.5 12.59a3.91 3.91 0 103.9 3.91 3.92 3.92 0 00-3.9-3.91zm11.71 3.91c0-1.62 0-3.22-.08-4.83a6.91 6.91 0 00-1.89-4.91 6.91 6.91 0 00-4.91-1.89c-1.61-.09-3.22-.08-4.83-.08s-3.22 0-4.83.08a6.91 6.91 0 00-4.91 1.89 6.91 6.91 0 00-1.89 4.91c-.09 1.61-.08 3.22-.08 4.83s0 3.22.08 4.83a6.91 6.91 0 001.89 4.91 6.91 6.91 0 004.91 1.89c1.61.09 3.22.08 4.83.08s3.22 0 4.83-.08a6.91 6.91 0 004.91-1.89 6.91 6.91 0 001.89-4.91c.1-1.61.08-3.21.08-4.83zm-11.71 6a6 6 0 116-6 6 6 0 01-6 6.01zm6.25-10.86a1.42 1.42 0 111.3-.87 1.44 1.44 0 01-.31.46 1.37 1.37 0 01-.45.3 1.41 1.41 0 01-.54.12z"/></symbol><symbol viewBox="0 0 32 32" id="intro-arrow" xmlns="http://www.w3.org/2000/svg"><path d="M4 17h20.06l-6.78 6.78 1.44 1.44 8.5-8.5.69-.72-.69-.72-8.5-8.5-1.44 1.44L24.06 15H4z"/></symbol><symbol viewBox="0 0 32 32" id="order-arrow" xmlns="http://www.w3.org/2000/svg"><path d="M4 17h20.06l-6.78 6.78 1.44 1.44 8.5-8.5.69-.72-.69-.72-8.5-8.5-1.44 1.44L24.06 15H4z"/></symbol><symbol viewBox="0 0 33 33" id="tiktok" xmlns="http://www.w3.org/2000/svg"><path d="M17 4.52h3.91a6.23 6.23 0 001.75 4.17 7.05 7.05 0 004.24 1.79v4a10.7 10.7 0 01-4.2-1 12.36 12.36 0 01-1.62-.93v8.75a7.64 7.64 0 01-1.35 3.94 7.45 7.45 0 01-5.91 3.21 7.29 7.29 0 01-4.08-1 7.54 7.54 0 01-3.64-5.7v-1.49a7.53 7.53 0 018.73-6.68v4.44a3.43 3.43 0 00-4.38 2.12 4 4 0 00-.14 1.61 3.4 3.4 0 003.5 2.87A3.36 3.36 0 0016.53 23a2.31 2.31 0 00.41-1c.1-1.79.06-3.57.07-5.36C17 12.56 17 8.54 17 4.52z"/></symbol><symbol viewBox="0 0 33 33" id="vk" xmlns="http://www.w3.org/2000/svg"><path d="M20 5h-7c-6.47 0-8 1.53-8 8v7c0 6.44 1.53 8 8 8h7c6.44 0 8-1.53 8-8v-7c0-6.47-1.54-8-8-8zm3.54 16.41H21.9c-.63 0-.83-.5-2-1.66-1-1-1.42-1.08-1.67-1.08s-.44.09-.44.57v1.51c0 .4-.13.64-1.2.64a6.52 6.52 0 01-5.11-3.06c-2.08-2.93-2.65-5.12-2.65-5.57 0-.24.1-.47.57-.47h1.7c.42 0 .59.19.75.65.83 2.38 2.21 4.48 2.77 4.48.21 0 .31-.1.31-.64v-2.46c-.06-1.14-.66-1.24-.66-1.64a.4.4 0 01.42-.39h2.63c.35 0 .48.19.48.61v3.33c0 .36.17.49.26.49s.39-.13.78-.52a14.3 14.3 0 002.06-3.43.75.75 0 01.73-.47h1.68c.5 0 .61.26.5.62a21.11 21.11 0 01-2.26 3.86c-.17.3-.24.42 0 .75s.77.75 1.15 1.2a7.24 7.24 0 011.42 2c.16.47-.08.72-.55.72z"/></symbol><symbol viewBox="0 0 33 33" id="youtube" xmlns="http://www.w3.org/2000/svg"><path d="M29.69 9.9a3.42 3.42 0 00-2.42-2.42c-2.16-.6-10.77-.6-10.77-.6s-8.61 0-10.77.55A3.55 3.55 0 003.3 9.88a37 37 0 00-.57 6.61 36.62 36.62 0 00.56 6.62 3.45 3.45 0 002.42 2.43c2.18.59 10.77.6 10.77.6s8.61 0 10.77-.55a3.48 3.48 0 002.43-2.43 36 36 0 00.57-6.61 34.36 34.36 0 00-.56-6.65zM13.74 20.63v-8.25l7.16 4.13z"/></symbol></svg>    </div>
+
+    <div class="page-content">
+        <header class="page-header">
+            <div class="container">
+                <div class="page-header__row">
+                    <a href="index.html" class="page-header__logo">
+                        <img src="img/logo.svg" alt="" class="page-header__logo-image" width="170">
+                    </a>
+                    <nav class="page-header__nav">
+                        <ul>
+                            <li>
+                                <a href="#">О компании</a>
+                            </li>
+                            <li>
+                                <a href="#">Отзывы</a>
+                            </li>
+                            <li>
+                                <a href="#">Частые вопросы</a>
+                            </li>
+                        </ul>
+                    </nav>
+        
+                    <div class="page-header__buttons">
+                        <a href="#" class="page-header__button">
+                            Связаться
+                        </a>
+                        <a href="#" class="page-header__button page-header__button--filled">
+                            Заказать
+                        </a>
+                    </div>
+        
+                    <button class="page-header__burger" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>        <main class="page-main">
+
+
+<section class="intro">
+    <div class="intro__bg">
+        <img src="img/intro-bottom-bg.png" alt="" class="intro__bg-image">
+    </div>
+    <div class="container">
+        <div class="intro__row">
+            <div class="intro__col">
+                <h1 class="intro__main-heading">
+                    Создаём<br>
+                    компьютеры<br>
+                    мечты
+                </h1>
+                <div class="intro__order">
+                    <div class="intro__order-count">
+                        <div class="intro__order-count-number">
+                            94
+                        </div>
+                        <div class="intro__order-count-text">
+                            компьютера<br> уже создано
+                        </div>
+                    </div>
+                    <a href="#" class="intro__order-btn">
+                        заказать
+                        <svg width="14" height="14" aria-hidden="true" class="icon-order-arrow">
+                            <use xlink:href="#order-arrow"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="intro__col">
+                <div class="intro__community-wrapper">
+
+
+                    <div class="intro__community">
+                        Компьютеры от cамого большого <img src="img/youtube-red.svg" alt="">&nbsp;YouTube-коммьюнити
+                        в сфере
+                        компьютерного железа
+                    </div>
+                </div>
+                <div class="intro__pc-block">
+                    <img src="img/pc-resized/1.png" alt="" class="intro__pc-block-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="our-approach">
+    <div class="container">
+        <h2 class="section-heading our-approach__heading">
+            Наш подход
+        </h2>
+        <div class="our-approach__text">
+            <p>
+                Учтём все ваши пожелания и бюджет, исходя из которого мы создадим вам лучший компьютер. Протестируем
+                и сделаем всё, чтоб он радовал вас многие годы!
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section class="purpose">
+    <div class="container">
+        <div class="purpose__content">
+            <div class="purpose__col">
+                <h2 class="section-heading purpose__small-heading">
+                    Для чего
+                </h2>
+                <h3 class="purpose__large-heading">
+                    Выберите компьютер под ваши цели и желания
+                </h3>
+                <a href="#" class="purpose__link">
+                    Связаться
+                </a>
+            </div>
+            <div class="purpose__col">
+                <ul class="purpose__list">
+                    <li class="purpose__list-item">
+                        <a href="#" class="purpose__card">
+                            <h4 class="purpose__card-title">
+                                игровой пк
+                            </h4>
+                            <div class="purpose__card-image-container">
+                                <img src="img/rainbow-blurred-circle.svg" alt="" class="purpose__card-blur">
+                                <img src="img/pc-1.png" alt="" class="purpose__card-image">
+                            </div>
+                            <div class="purpose__card-text">
+                                <p>
+                                    Мощь, внешний вид и гейминг на ультрах
+                                </p>
+                            </div>
+                            <div class="purpose__card-choose">
+                                Выбрать +
+                            </div>
+                        </a>
+                    </li>
+                    <li class="purpose__list-item">
+                        <a href="#" class="purpose__card">
+                            <h4 class="purpose__card-title">
+                                рабочий пк
+                            </h4>
+                            <div class="purpose__card-image-container">
+                                <img src="img/blue-blurred-circle.svg" alt="" class="purpose__card-blur">
+                                <img src="img/pc-2.png" alt="" class="purpose__card-image">
+                            </div>
+                            <div class="purpose__card-text">
+                                <p>
+                                    Производительность, солидность и ваш высокий КПД в работе
+                                </p>
+                            </div>
+                            <div class="purpose__card-choose">
+                                Выбрать +
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="how-to-order">
+    <img src="img/how-to-order-gradient.svg" alt="" class="how-to-order__gradient">
+    <div class="container">
+        <div class="how-to-order__grid">
+            <div class="how-to-order__heading-block">
+                <h2 class="section-heading how-to-order__small-heading">
+                    Как заказать
+                </h2>
+                <h3 class="how-to-order__large-heading">
+                    Всего 5 шагов и компьютер ваш!
+                </h3>
+            </div>
+            <ol class="how-to-order__list">
+                <li class="how-to-order__list-item">
+                    <div class="how-to-order__card">
+                        <div class="how-to-order__card-content">
+                            <h4 class="how-to-order__card-title">
+                                Заявка
+                            </h4>
+                            <div class="how-to-order__card-text">
+                                <p>
+                                    Вы оставляете заявку на сайте
+                                </p>
+                            </div>
+                            <a href="#" class="how-to-order__card-link">
+                                Напишите нам
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="how-to-order__list-item">
+                    <div class="how-to-order__card">
+                        <div class="how-to-order__card-content">
+                            <h4 class="how-to-order__card-title">
+                                Полное сопровождение
+                            </h4>
+                            <div class="how-to-order__card-text">
+                                <p>
+                                    Наш специалист учтёт все ваши пожелания и сразу запустит процесс изготовления
+                                    компьютера
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="how-to-order__list-item">
+                    <div class="how-to-order__card">
+                        <div class="how-to-order__card-content">
+                            <h4 class="how-to-order__card-title">
+                                Оплата
+                            </h4>
+                            <div class="how-to-order__card-text">
+                                <p>
+                                    Как только всё будет согласовано с менеджером, вы сможете оплатить свой заказ. Мы
+                                    принимаем оплату как от физических, так и от юридических лиц
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="how-to-order__list-item">
+                    <div class="how-to-order__card">
+                        <div class="how-to-order__card-content">
+                            <h4 class="how-to-order__card-title">
+                                Контроль качества
+                            </h4>
+                            <div class="how-to-order__card-text">
+                                <p>
+                                    Мы оперативно проведём расширенное тестирование вашего компьютера в различных
+                                    программах и играх. Далее компьютер проходит дополнительный технический контроль
+                                    качества
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="how-to-order__list-item">
+                    <div class="how-to-order__card">
+                        <div class="how-to-order__card-content">
+                            <h4 class="how-to-order__card-title">
+                                Доставка по всей России и СНГ
+                            </h4>
+                            <div class="how-to-order__card-text">
+                                <p>
+                                    Мы отправим вам компьютер в нашем эксклюзивном защитном ящике транспортной
+                                    компанией. Также имеется возможность самовывоза в г. Ярославль
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+
+            </ol>
+        </div>
+    </div>
+</section>
+
+
+<section class="video js-video">
+    <div class="container">
+        <div class="video__card">
+            <div class="video__card-media">
+                <img src="img/video-preview.jpg" alt="">
+                <div class="video__card-media-plyr-wrapper">
+
+
+                    <div class="video__card-media-plyr" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
+                    </div>
+                </div>
+            </div>
+            <div class="video__card-content">
+                <h2 class="section-heading video__card-heading">
+                    О компании
+                </h2>
+                <div class="video__card-inner">
+                    <h3 class="video__card-title">
+                        Команда Бригмана - это экспертный взгляд на компьютеры и 10-летний опыт работы с ними
+                    </h3>
+                    <a href="#" class="video__card-link">
+                        Заказать компьютер
+                    </a>
+                </div>
+            </div>
+            <button class="video__card-close" type="button">
+                <svg width="14" height="14" aria-hidden="true" class="icon-close">
+                    <use xlink:href="#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<section class="why-brigman">
+    <div class="why-brigman__bg">
+        <img src="img/why-brigman-bg.png" alt="" class="why-brigman__bg-image">
+    </div>
+    <div class="container">
+        <div class="why-brigman__row">
+            <div class="why-brigman__heading-block">
+                <h2 class="section-heading why-brigman__small-heading">
+                    6 причин
+                </h2>
+                <h3 class="why-brigman__large-heading">
+                    почему именно «BRIGman»
+                </h3>
+                <a href="#" class="why-brigman__link">
+                    Напишите нам
+                </a>
+            </div>
+            <div class="why-brigman__slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="why-brigman__slider-card">
+                                <div class="why-brigman__slider-card-number">
+                                    01
+                                </div>
+                                <div class="why-brigman__slider-card-content">
+                                    <h4 class="why-brigman__slider-card-title">
+                                        ПК под конкретную задачу и бюджет
+                                    </h4>
+                                    <div class="why-brigman__slider-card-text">
+                                        <p>
+                                            Мы учитываем все ваши пожелания и потребности. Для нас очень важно, чтобы вы
+                                            остались довольны нашим продуктом. Мы создадим для вас идеальный компьютер
+                                            под нужный бюджет.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="why-brigman__slider-card">
+                                <div class="why-brigman__slider-card-number">
+                                    02
+                                </div>
+                                <div class="why-brigman__slider-card-content">
+                                    <h4 class="why-brigman__slider-card-title">
+                                        Расширенное тестирование
+                                    </h4>
+                                    <div class="why-brigman__slider-card-text">
+                                        <p>
+                                            Каждый компьютер проходит обязательный этап расширенного тестирования,
+                                            который включает в себя список различных программ и игр. Вы получаете
+                                            документацию со всеми результатами тестирования комплектующих.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="why-brigman__slider-card">
+                                <div class="why-brigman__slider-card-number">
+                                    03
+                                </div>
+                                <div class="why-brigman__slider-card-content">
+                                    <h4 class="why-brigman__slider-card-title">
+                                        ПК под ключ и возможность выбора
+                                    </h4>
+                                    <div class="why-brigman__slider-card-text">
+                                        <p>
+                                            Мы предоставляем возможность выбора установки ПО и различных программ. Мы
+                                            можем установить любые программы по вашему запросу, активировать их и
+                                            полностью подготовить компьютер к работе. Также для экономии вы сможете
+                                            отказаться от любого ПО, даже от Windows!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="why-brigman__slider-card">
+                                <div class="why-brigman__slider-card-number">
+                                    04
+                                </div>
+                                <div class="why-brigman__slider-card-content">
+                                    <h4 class="why-brigman__slider-card-title">
+                                        Супер эксклюзивные проекты
+                                    </h4>
+                                    <div class="why-brigman__slider-card-text">
+                                        <p>
+                                            Опыт нашей команды - более 1000 компьютеров различной сложности. Мы можем
+                                            создать любые проекты, с аэрографией и двухконтурной системой водяного
+                                            охлаждения. Наши профессиональные дизайнеры сделают так, что любой гость в
+                                            доме испытает яркие эмоции, увидев ваш компьютер. Также, с вашего
+                                            разрешения, мы снимем целый ролик про ПК на наш YouTube канал. Ваш компьютер
+                                            будет предметом восхищения сотен тысяч человек!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="why-brigman__slider-card">
+                                <div class="why-brigman__slider-card-number">
+                                    05
+                                </div>
+                                <div class="why-brigman__slider-card-content">
+                                    <h4 class="why-brigman__slider-card-title">
+                                        Гарантия до 2х лет
+                                    </h4>
+                                    <div class="why-brigman__slider-card-text">
+                                        <p>
+                                            Стандартная гарантия - 1 год. Есть возможность её расширить до 2х лет. При
+                                            любом намёке на проблему мы заберем ваш компьютер на диагностику. Для вас мы
+                                            всегда на связи в любом удобном мессенджере.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="why-brigman__slider-card">
+                                <div class="why-brigman__slider-card-number">
+                                    06
+                                </div>
+                                <div class="why-brigman__slider-card-content">
+                                    <h4 class="why-brigman__slider-card-title">
+                                        Комплектация
+                                    </h4>
+                                    <div class="why-brigman__slider-card-text">
+                                        <p>
+                                            Наша репутация - для нас всё! Вы получите компьютер в уникальном черном
+                                            ящике с полной документацией в фирменном стиле. Также мы дарим
+                                            брендированный металлический магнит с выгравированным порядковым номером
+                                            вашего компьютера.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="contact-us">
+    <div class="ticker contact-us__ticker js-ticker">
+        <div class="ticker__track">
+            <div class="ticker__inner-track">
+                <div class="ticker__item">
+                    Напишите нам&nbsp;—&nbsp;
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+
+        <form action="/" method="POST" class="contact-us__form" data-need-validation="">
+            <div class="contact-us__form-bg">
+                <div class="contact-us__form-bg-image-wrapper">
+                    <img src="img/contact-us-bg.png" alt="" class="contact-us__form-bg-image">
+                </div>
+            </div>
+            <h2 class="contact-us__form-heading">
+                Оставить заявку
+            </h2>
+            <div class="contact-us__form-fields">
+                <div class="contact-us__form-field">
+                    <label class="contact-us__form-label">
+                        <input type="text" name="your-name" class="contact-us__form-input" required=""
+                            placeholder="Ваше имя">
+                        <span class="contact-us__form-label-text">
+                            Ваше имя
+                        </span>
+                    </label>
+                </div>
+                <div class="contact-us__form-field">
+                    <label class="contact-us__form-label">
+                        <input type="tel" name="your-phone" class="contact-us__form-input js-phone-input" required=""
+                            data-parsley-phone="" placeholder="Телефон">
+                        <span class="contact-us__form-label-text">
+                            Телефон
+                        </span>
+                    </label>
+                </div>
+                <div class="contact-us__form-field">
+                    <label class="contact-us__form-label">
+                        <input type="email" name="your-email" class="contact-us__form-input" required=""
+                            placeholder="Почта">
+                        <span class="contact-us__form-label-text">
+                            Почта
+                        </span>
+                    </label>
+                </div>
+                <div class="contact-us__form-field contact-us__form-field--wide">
+                    <label class="contact-us__form-label">
+
+                        <textarea name="your-comment" class="contact-us__form-input"
+                            placeholder="Ваш комментарий"></textarea>
+                        <span class="contact-us__form-label-text">
+                            Комментарий
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="contact-us__form-controls">
+                <button type="submit" class="contact-us__form-submit">
+                    Отправить
+                </button>
+                <label class="contact-us__form-checkbox">
+                    <input type="checkbox" name="policy" value="Y" class="contact-us__form-checkbox-input" required=""
+                        checked="">
+                    <span class="contact-us__form-checkbox-mark">
+
+                    </span>
+                    <span class="contact-us__form-checkbox-text">
+                        Соглашаюсь на обработку <a href="#">
+                            персональных данных
+                        </a>
+                    </span>
+                </label>
+            </div>
+            <img src="img/contact-pc.png" alt="" class="contact-us__form-pc">
+        </form>
+    </div>
+</section>
+
+        </main>
+        <footer class="page-footer">
+            <img src="img/mops.png" alt="" class="page-footer__mops">
+            <div class="container">
+                <div class="page-footer__top-row">
+                    <a href="index.html" class="page-footer__logo">
+                        <img src="img/logo.svg" alt="" class="page-footer__logo-image">
+                    </a>
+                    <nav class="page-footer__nav">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    О компании
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Частые вопросы
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="page-footer__bottom-row">
+                    <ul class="page-footer__social-list">
+                        <li class="page-footer__social-list-item">
+                            <a href="#" class="page-footer__social-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-vk">
+                                    <use xlink:href="#youtube"></use>
+                                </svg>
+                                YouTube канал
+                            </a>
+                        </li>
+                        <li class="page-footer__social-list-item">
+                            <a href="#" class="page-footer__social-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-vk">
+                                    <use xlink:href="#vk"></use>
+                                </svg>
+                                Группа в ВК
+                            </a>
+                        </li>
+                        <li class="page-footer__social-list-item">
+                            <a href="#" class="page-footer__social-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-instagram">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                                Инстаграм
+                            </a>
+                        </li>
+                        <li class="page-footer__social-list-item">
+                            <a href="#" class="page-footer__social-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-tiktok">
+                                    <use xlink:href="#tiktok"></use>
+                                </svg>
+                                ТикТок
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>        <style>
+            .ie-placeholder {
+                z-index: 4000;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #202020;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                
+            }
+            .ie-placeholder__message {
+                font-size: 2rem;
+                line-height: 1.2;
+                font-weight: 500;
+                margin: auto;
+            }
+            @supports (display: grid) {
+                .ie-placeholder {
+                    display: none;
+                }
+            }
+        </style>
+        <div class="ie-placeholder">
+            <div class="ie-placeholder__message">
+                Извините, ваш браузер не поддерживается
+            </div>
+        </div>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="assets/js/backend.js"></script>
+    </div>
+</body>
+
+</html>

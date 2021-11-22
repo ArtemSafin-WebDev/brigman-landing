@@ -1,0 +1,40 @@
+.ticker {
+    position: relative;
+    height: 15rem;
+}
+
+.ticker__track {
+    display: flex;
+    align-items: center;
+    // position: absolute;
+    // left: 50%;
+    // top: 0;
+    // transform: translateX(-50%);
+    // height: 100%;
+}
+
+.ticker__inner-track {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    // animation: ticker 18s linear infinite;
+}
+
+.ticker__item {
+    font-weight: normal;
+    font-size: 11.5rem;
+    line-height: 15rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+@keyframes ticker {
+    // from {
+    //     transform: translateX(0);
+    // }
+
+    // to {
+    //     transform: translateX(-100%);
+    // }
+}
