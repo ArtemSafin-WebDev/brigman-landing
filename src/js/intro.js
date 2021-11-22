@@ -18,6 +18,21 @@ export default function intro() {
                 frame: 1
             };
 
+            const images = [];
+
+            for (let i = 0; i < 60; i++) {
+                const img = document.createElement('img');
+                img.src = `img/pc-resized/${i + 1}.png`;
+                img.classList.add('intro__pc-block-image');
+                img.style.display = 'none';
+                images.push(img);
+                pcBlock.appendChild(img);
+            }
+
+            if (images.length) {
+                images[0].style.display = '';
+            }
+
             const tl = gsap.timeline({
                 scrollTrigger: {
                     start: 'top top+=80',
@@ -39,7 +54,9 @@ export default function intro() {
                 frame: frameCount,
                 snap: 'frame',
                 onUpdate: () => {
-                    image.src = `img/pc-resized/${pc.frame}.png`;
+                    images.forEach(image => (image.style.display = 'none'));
+                    images[pc.frame - 1].style.display = '';
+                    // image.src = `img/pc-resized/${pc.frame}.png`;
                 }
             });
         }
