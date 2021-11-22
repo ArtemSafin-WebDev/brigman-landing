@@ -107,6 +107,11 @@
             margin: 0;
         }
     }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
+    }
 }
 
 .page-footer__social-link-text {
