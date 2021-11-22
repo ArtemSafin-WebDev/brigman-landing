@@ -596,12 +596,20 @@
             <h3 class="faq__large-heading">
                 Часто задаваемые вопросы
             </h3>
+
             <div class="faq__row">
                 <div class="faq__col">
                     <h4 class="faq__medium-heading">
                         Популярные
                         вопросы
                     </h4>
+                    <div class="faq__mobile-filter">
+                        <select name="category" class="js-custom-select" id="faq-mobile-select">
+                            <option value="0">Вопросы по покупке</option>
+                            <option value="1"> Вопросы по гарантии</option>
+                            <option value="2"> Вопросы по оплате и доставке</option>
+                        </select>
+                    </div>
                     <ul class="faq__popular-list">
                         <li class="faq__popular-list-item">
                             <a href="#" class="faq__popular-link">
@@ -1355,7 +1363,7 @@
             </div>
             <img data-src="img/contact-pc.png" alt="" class="contact-us__form-pc lazyload">
 
-           
+
         </form>
     </div>
 </section>

@@ -8,6 +8,7 @@ export default function customSelects() {
             searchEnabled: false,
             itemSelectText: '',
             shouldSort: false,
+            position: 'bottom'
         });
     });
 }

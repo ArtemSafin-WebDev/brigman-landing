@@ -7,29 +7,32 @@ export default function faq() {
 
     elements.forEach(element => {
         const tabBtns = Array.from(element.querySelectorAll('.faq__popular-link'));
-        const tabItems = Array.from(element.querySelectorAll('.faq__tabs-item'))
+        const tabItems = Array.from(element.querySelectorAll('.faq__tabs-item'));
+
+        const mobileSelect = document.querySelector('#faq-mobile-select');
 
         const setActiveBtn = index => {
             tabBtns.forEach(btn => btn.classList.remove('active'));
             tabItems.forEach(item => item.classList.remove('active'));
             tabBtns[index].classList.add('active');
             tabItems[index].classList.add('active');
-            ScrollTrigger.refresh()
-        }
+            ScrollTrigger.refresh();
+        };
 
         if (tabBtns.length) {
             setActiveBtn(0);
         }
 
-        
-
+        mobileSelect.addEventListener('change', () => {
+            setActiveBtn(mobileSelect.value);
+        });
 
         tabBtns.forEach((btn, btnIndex) => {
             btn.addEventListener('click', event => {
                 event.preventDefault();
 
                 setActiveBtn(btnIndex);
-            })
-        })
-    })
+            });
+        });
+    });
 }
